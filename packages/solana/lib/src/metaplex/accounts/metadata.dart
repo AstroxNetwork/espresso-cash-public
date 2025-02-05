@@ -1,19 +1,30 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import 'package:solana/base58.dart';
 import 'package:solana/solana.dart';
 import 'package:solana/src/metaplex/off_chain_metadata.dart';
 
-class Metadata {
-  const Metadata({
-    required this.name,
-    required this.symbol,
-    required this.uri,
-    required this.updateAuthority,
-    required this.mint,
-  });
+part 'metadata.freezed.dart';
+
+part 'metadata.g.dart';
+
+@freezed
+class Metadata with _$Metadata {
+  const factory Metadata({
+    required String name,
+    required String symbol,
+    required String uri,
+    required String updateAuthority,
+    required String mint,
+  }) = _Metadata;
+
+  const Metadata._();
+
+  factory Metadata.fromJson(Map<String, dynamic> json) =>
+      _$MetadataFromJson(json);
 
   factory Metadata.fromBinary(List<int> sourceBytes) {
     final bytes = Int8List.fromList(sourceBytes);
@@ -53,12 +64,6 @@ class Metadata {
       json.decode(response.body) as Map<String, dynamic>,
     );
   }
-
-  final String name;
-  final String symbol;
-  final String uri;
-  final String updateAuthority;
-  final String mint;
 }
 
 class _StructReader {
