@@ -12,9 +12,9 @@ class OffChainMetadata {
     required this.description,
     required this.symbol,
     required this.image,
-    required this.properties,
-    required this.attributes,
-    required this.collection,
+    this.properties,
+    this.attributes,
+    this.collection,
   });
 
   factory OffChainMetadata.fromJson(Map<String, dynamic> json) =>
@@ -24,8 +24,8 @@ class OffChainMetadata {
   final String description;
   final String symbol;
   final String image;
-  final Properties properties;
-  final List<Attribute> attributes;
+  final Properties? properties;
+  final List<Attribute>? attributes;
   final Collection? collection;
 
   Map<String, dynamic> toJson() => _$OffChainMetadataToJson(this);
