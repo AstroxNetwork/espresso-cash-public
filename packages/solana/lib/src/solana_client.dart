@@ -25,6 +25,7 @@ class SolanaClient {
     required List<Ed25519HDKeyPair> signers,
     SignatureCallback onSigned = ignoreOnSigned,
     required Commitment commitment,
+    void Function(TransactionId? transactionId)? onTimeout,
   }) async {
     final bh = await rpcClient.getLatestBlockhash(commitment: commitment).value;
     final tx = await signTransaction(
@@ -34,13 +35,19 @@ class SolanaClient {
     );
     await onSigned(tx.signatures.first.toBase58());
 
-    final signature = await rpcClient.sendTransaction(
-      tx.encode(),
-      preflightCommitment: commitment,
-    );
-
-    await waitForSignatureStatus(signature, status: commitment);
-
+    TransactionId? signature;
+    try {
+      signature = await rpcClient.sendTransaction(
+        tx.encode(),
+        preflightCommitment: commitment,
+      );
+      await waitForSignatureStatus(signature, status: commitment);
+    } on TimeoutException {
+      if (onTimeout != null) {
+        onTimeout(signature);
+      }
+      rethrow;
+    }
     return signature;
   }
 
