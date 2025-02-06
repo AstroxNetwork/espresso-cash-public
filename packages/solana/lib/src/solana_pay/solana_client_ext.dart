@@ -171,6 +171,7 @@ extension SolanaClientSolanaPay on SolanaClient {
     String? memo,
     SignatureCallback? onSigned,
     Commitment commitment = Commitment.finalized,
+    SignatureTimeoutCallback? onTimeout,
   }) async =>
       sendAndConfirmTransaction(
         message: await createSolanaPayMessage(
@@ -185,6 +186,7 @@ extension SolanaClientSolanaPay on SolanaClient {
         signers: [payer],
         onSigned: onSigned ?? ignoreOnSigned,
         commitment: commitment,
+        onTimeout: onTimeout,
       );
 
   /// Finds the oldest transaction signature referencing a given public key.

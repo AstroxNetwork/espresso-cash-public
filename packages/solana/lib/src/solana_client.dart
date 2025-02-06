@@ -25,7 +25,7 @@ class SolanaClient {
     required List<Ed25519HDKeyPair> signers,
     SignatureCallback onSigned = ignoreOnSigned,
     required Commitment commitment,
-    void Function(TransactionId? transactionId)? onTimeout,
+    SignatureTimeoutCallback? onTimeout,
   }) async {
     final bh = await rpcClient.getLatestBlockhash(commitment: commitment).value;
     final tx = await signTransaction(
@@ -93,3 +93,5 @@ typedef SignatureCallback = FutureOr<void> Function(
 );
 
 void ignoreOnSigned(TransactionId _) {}
+
+typedef SignatureTimeoutCallback = void Function(TransactionId? transactionId);

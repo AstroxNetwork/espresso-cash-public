@@ -14,6 +14,7 @@ extension SolanaClientSystemProgram on SolanaClient {
     String? memo,
     SignatureCallback? onSigned,
     Commitment commitment = Commitment.finalized,
+    SignatureTimeoutCallback? onTimeout,
   }) {
     final instructions = [
       SystemInstruction.transfer(
@@ -30,6 +31,7 @@ extension SolanaClientSystemProgram on SolanaClient {
       signers: [source],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
   }
 

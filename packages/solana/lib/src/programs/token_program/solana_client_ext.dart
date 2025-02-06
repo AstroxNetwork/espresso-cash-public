@@ -61,6 +61,7 @@ extension SolanaClientTokenProgram on SolanaClient {
     SignatureCallback? onSigned,
     TokenProgramType tokenProgramType = TokenProgramType.tokenProgram,
     Commitment commitment = Commitment.finalized,
+    SignatureTimeoutCallback? onTimeout,
   }) async {
     final mint = await Ed25519HDKeyPair.random();
 
@@ -87,6 +88,7 @@ extension SolanaClientTokenProgram on SolanaClient {
       signers: [mintAuthority, mint],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
 
     return getMint(address: mint.publicKey, commitment: commitment);
@@ -100,6 +102,7 @@ extension SolanaClientTokenProgram on SolanaClient {
     required Ed25519HDKeyPair authority,
     SignatureCallback? onSigned,
     Commitment commitment = Commitment.finalized,
+    SignatureTimeoutCallback? onTimeout,
   }) {
     final instruction = TokenInstruction.mintTo(
       mint: mint,
@@ -113,6 +116,7 @@ extension SolanaClientTokenProgram on SolanaClient {
       signers: [authority],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
   }
 
@@ -132,6 +136,7 @@ extension SolanaClientTokenProgram on SolanaClient {
     SignatureCallback? onSigned,
     Commitment commitment = Commitment.finalized,
     TokenProgramType tokenProgram = TokenProgramType.tokenProgram,
+    SignatureTimeoutCallback? onTimeout,
   }) async {
     final associatedRecipientAccount = await getAssociatedTokenAccount(
       owner: destination,
@@ -179,6 +184,7 @@ extension SolanaClientTokenProgram on SolanaClient {
       signers: [owner],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
   }
 }

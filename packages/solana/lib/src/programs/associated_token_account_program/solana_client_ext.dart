@@ -53,6 +53,7 @@ extension SolanaClientAssociatedTokenAccontProgram on SolanaClient {
     TokenProgramType tokenProgramType = TokenProgramType.tokenProgram,
     SignatureCallback? onSigned,
     Commitment commitment = Commitment.finalized,
+    SignatureTimeoutCallback? onTimeout,
   }) async {
     final effectiveOwner = owner ?? funder.publicKey;
 
@@ -74,6 +75,7 @@ extension SolanaClientAssociatedTokenAccontProgram on SolanaClient {
       signers: [funder],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
 
     // TODO(IA): populate rentEpoch correctly
@@ -95,6 +97,7 @@ extension SolanaClientAssociatedTokenAccontProgram on SolanaClient {
     required Wallet account,
     required Wallet creator,
     SignatureCallback? onSigned,
+    SignatureTimeoutCallback? onTimeout,
     Commitment commitment = Commitment.finalized,
   }) async {
     const space = TokenProgram.neededAccountSpace;
@@ -111,6 +114,7 @@ extension SolanaClientAssociatedTokenAccontProgram on SolanaClient {
       signers: [creator, account],
       onSigned: onSigned ?? ignoreOnSigned,
       commitment: commitment,
+      onTimeout: onTimeout,
     );
 
     // TODO(IA): need to check if it is executable and grab the rentEpoch
