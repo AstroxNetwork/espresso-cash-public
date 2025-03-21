@@ -23,6 +23,8 @@ class Ed25519HDPublicKey implements PublicKey {
     return Ed25519HDPublicKey(bytes);
   }
 
+  final List<int> bytes;
+
   static Future<Ed25519HDPublicKey> createWithSeed({
     required Ed25519HDPublicKey fromPublicKey,
     required String seed,
@@ -91,7 +93,14 @@ class Ed25519HDPublicKey implements PublicKey {
     throw const FormatException('cannot find program address with these seeds');
   }
 
-  final List<int> bytes;
+  static bool isValidFromBase58(String data) {
+    try {
+      final bytes = base58decode(data);
+      return bytes.length == 32;
+    } on FormatException catch (_) {
+      return false;
+    }
+  }
 
   String toBase58() => base58encode(bytes);
 
