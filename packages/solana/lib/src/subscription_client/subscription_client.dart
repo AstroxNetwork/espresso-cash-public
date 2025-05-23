@@ -84,13 +84,13 @@ class SubscriptionClient {
       _subscribe<Logs>(
         'logs',
         params: <dynamic>[
-          filter.when(
-            all: () => 'all',
-            allWithVotes: () => 'allWithVotes',
-            mentions: (pubKeys) => <String, List<String>>{
-              'mentions': pubKeys,
-            },
-          ),
+          switch (filter) {
+            LogsFilterAll() => 'all',
+            LogsFilterAllWithVotes() => 'allWithVotes',
+            final LogsFilterMentions filter => <String, List<String>>{
+                'mentions': filter.pubKeys,
+              },
+          },
           if (commitment != null)
             <String, String>{
               'commitment': commitment.value,

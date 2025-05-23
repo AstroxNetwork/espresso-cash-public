@@ -15,7 +15,7 @@ part 'signed_tx.freezed.dart';
 /// the solana convention for the set of addresses that they belong to within
 /// the message.
 @freezed
-class SignedTx with _$SignedTx {
+sealed class SignedTx with _$SignedTx {
   const factory SignedTx({
     @Default(<Signature>[]) List<Signature> signatures,
     required CompiledMessage compiledMessage,

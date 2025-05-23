@@ -12,7 +12,7 @@ part 'metadata.freezed.dart';
 part 'metadata.g.dart';
 
 @freezed
-class Metadata with _$Metadata {
+sealed class Metadata with _$Metadata {
   const factory Metadata({
     required String name,
     required String symbol,

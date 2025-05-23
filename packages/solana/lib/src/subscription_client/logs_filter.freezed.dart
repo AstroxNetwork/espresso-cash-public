@@ -37,13 +37,13 @@ class $LogsFilterCopyWith<$Res> {
 
 /// @nodoc
 
-class _LogsFilterAll implements LogsFilter {
-  const _LogsFilterAll();
+class LogsFilterAll implements LogsFilter {
+  const LogsFilterAll();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _LogsFilterAll);
+        (other.runtimeType == runtimeType && other is LogsFilterAll);
   }
 
   @override
@@ -57,13 +57,13 @@ class _LogsFilterAll implements LogsFilter {
 
 /// @nodoc
 
-class _LosgFilterAllWithVotes implements LogsFilter {
-  const _LosgFilterAllWithVotes();
+class LogsFilterAllWithVotes implements LogsFilter {
+  const LogsFilterAllWithVotes();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _LosgFilterAllWithVotes);
+        (other.runtimeType == runtimeType && other is LogsFilterAllWithVotes);
   }
 
   @override
@@ -77,8 +77,8 @@ class _LosgFilterAllWithVotes implements LogsFilter {
 
 /// @nodoc
 
-class _LogsFilterMentions implements LogsFilter {
-  const _LogsFilterMentions(final List<String> pubKeys) : _pubKeys = pubKeys;
+class LogsFilterMentions implements LogsFilter {
+  const LogsFilterMentions(final List<String> pubKeys) : _pubKeys = pubKeys;
 
   final List<String> _pubKeys;
   List<String> get pubKeys {
@@ -91,14 +91,14 @@ class _LogsFilterMentions implements LogsFilter {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$LogsFilterMentionsCopyWith<_LogsFilterMentions> get copyWith =>
-      __$LogsFilterMentionsCopyWithImpl<_LogsFilterMentions>(this, _$identity);
+  $LogsFilterMentionsCopyWith<LogsFilterMentions> get copyWith =>
+      _$LogsFilterMentionsCopyWithImpl<LogsFilterMentions>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LogsFilterMentions &&
+            other is LogsFilterMentions &&
             const DeepCollectionEquality().equals(other._pubKeys, _pubKeys));
   }
 
@@ -113,22 +113,22 @@ class _LogsFilterMentions implements LogsFilter {
 }
 
 /// @nodoc
-abstract mixin class _$LogsFilterMentionsCopyWith<$Res>
+abstract mixin class $LogsFilterMentionsCopyWith<$Res>
     implements $LogsFilterCopyWith<$Res> {
-  factory _$LogsFilterMentionsCopyWith(
-          _LogsFilterMentions value, $Res Function(_LogsFilterMentions) _then) =
-      __$LogsFilterMentionsCopyWithImpl;
+  factory $LogsFilterMentionsCopyWith(
+          LogsFilterMentions value, $Res Function(LogsFilterMentions) _then) =
+      _$LogsFilterMentionsCopyWithImpl;
   @useResult
   $Res call({List<String> pubKeys});
 }
 
 /// @nodoc
-class __$LogsFilterMentionsCopyWithImpl<$Res>
-    implements _$LogsFilterMentionsCopyWith<$Res> {
-  __$LogsFilterMentionsCopyWithImpl(this._self, this._then);
+class _$LogsFilterMentionsCopyWithImpl<$Res>
+    implements $LogsFilterMentionsCopyWith<$Res> {
+  _$LogsFilterMentionsCopyWithImpl(this._self, this._then);
 
-  final _LogsFilterMentions _self;
-  final $Res Function(_LogsFilterMentions) _then;
+  final LogsFilterMentions _self;
+  final $Res Function(LogsFilterMentions) _then;
 
   /// Create a copy of LogsFilter
   /// with the given fields replaced by the non-null parameter values.
@@ -136,7 +136,7 @@ class __$LogsFilterMentionsCopyWithImpl<$Res>
   $Res call({
     Object? pubKeys = null,
   }) {
-    return _then(_LogsFilterMentions(
+    return _then(LogsFilterMentions(
       null == pubKeys
           ? _self._pubKeys
           : pubKeys // ignore: cast_nullable_to_non_nullable
