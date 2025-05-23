@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,93 +10,55 @@ part of 'metadata.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Metadata _$MetadataFromJson(Map<String, dynamic> json) {
-  return _Metadata.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Metadata {
-  String get name => throw _privateConstructorUsedError;
-  String get symbol => throw _privateConstructorUsedError;
-  String get uri => throw _privateConstructorUsedError;
-  String get updateAuthority => throw _privateConstructorUsedError;
-  String get mint => throw _privateConstructorUsedError;
+  String get name;
+  String get symbol;
+  String get uri;
+  String get updateAuthority;
+  String get mint;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MetadataCopyWith<Metadata> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MetadataCopyWith<$Res> {
-  factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) then) =
-      _$MetadataCopyWithImpl<$Res, Metadata>;
-  @useResult
-  $Res call(
-      {String name,
-      String symbol,
-      String uri,
-      String updateAuthority,
-      String mint});
-}
-
-/// @nodoc
-class _$MetadataCopyWithImpl<$Res, $Val extends Metadata>
-    implements $MetadataCopyWith<$Res> {
-  _$MetadataCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $MetadataCopyWith<Metadata> get copyWith =>
+      _$MetadataCopyWithImpl<Metadata>(this as Metadata, _$identity);
+
+  /// Serializes this Metadata to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? name = null,
-    Object? symbol = null,
-    Object? uri = null,
-    Object? updateAuthority = null,
-    Object? mint = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      symbol: null == symbol
-          ? _value.symbol
-          : symbol // ignore: cast_nullable_to_non_nullable
-              as String,
-      uri: null == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as String,
-      updateAuthority: null == updateAuthority
-          ? _value.updateAuthority
-          : updateAuthority // ignore: cast_nullable_to_non_nullable
-              as String,
-      mint: null == mint
-          ? _value.mint
-          : mint // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Metadata &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.uri, uri) || other.uri == uri) &&
+            (identical(other.updateAuthority, updateAuthority) ||
+                other.updateAuthority == updateAuthority) &&
+            (identical(other.mint, mint) || other.mint == mint));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, name, symbol, uri, updateAuthority, mint);
+
+  @override
+  String toString() {
+    return 'Metadata(name: $name, symbol: $symbol, uri: $uri, updateAuthority: $updateAuthority, mint: $mint)';
   }
 }
 
 /// @nodoc
-abstract class _$$MetadataImplCopyWith<$Res>
-    implements $MetadataCopyWith<$Res> {
-  factory _$$MetadataImplCopyWith(
-          _$MetadataImpl value, $Res Function(_$MetadataImpl) then) =
-      __$$MetadataImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MetadataCopyWith<$Res> {
+  factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) _then) =
+      _$MetadataCopyWithImpl;
   @useResult
   $Res call(
       {String name,
@@ -106,13 +69,14 @@ abstract class _$$MetadataImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MetadataImplCopyWithImpl<$Res>
-    extends _$MetadataCopyWithImpl<$Res, _$MetadataImpl>
-    implements _$$MetadataImplCopyWith<$Res> {
-  __$$MetadataImplCopyWithImpl(
-      _$MetadataImpl _value, $Res Function(_$MetadataImpl) _then)
-      : super(_value, _then);
+class _$MetadataCopyWithImpl<$Res> implements $MetadataCopyWith<$Res> {
+  _$MetadataCopyWithImpl(this._self, this._then);
 
+  final Metadata _self;
+  final $Res Function(Metadata) _then;
+
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,25 +86,25 @@ class __$$MetadataImplCopyWithImpl<$Res>
     Object? updateAuthority = null,
     Object? mint = null,
   }) {
-    return _then(_$MetadataImpl(
+    return _then(_self.copyWith(
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       symbol: null == symbol
-          ? _value.symbol
+          ? _self.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
               as String,
       uri: null == uri
-          ? _value.uri
+          ? _self.uri
           : uri // ignore: cast_nullable_to_non_nullable
               as String,
       updateAuthority: null == updateAuthority
-          ? _value.updateAuthority
+          ? _self.updateAuthority
           : updateAuthority // ignore: cast_nullable_to_non_nullable
               as String,
       mint: null == mint
-          ? _value.mint
+          ? _self.mint
           : mint // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -149,17 +113,16 @@ class __$$MetadataImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MetadataImpl extends _Metadata {
-  const _$MetadataImpl(
+class _Metadata extends Metadata {
+  const _Metadata(
       {required this.name,
       required this.symbol,
       required this.uri,
       required this.updateAuthority,
       required this.mint})
       : super._();
-
-  factory _$MetadataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MetadataImplFromJson(json);
+  factory _Metadata.fromJson(Map<String, dynamic> json) =>
+      _$MetadataFromJson(json);
 
   @override
   final String name;
@@ -172,16 +135,26 @@ class _$MetadataImpl extends _Metadata {
   @override
   final String mint;
 
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Metadata(name: $name, symbol: $symbol, uri: $uri, updateAuthority: $updateAuthority, mint: $mint)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MetadataCopyWith<_Metadata> get copyWith =>
+      __$MetadataCopyWithImpl<_Metadata>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MetadataToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MetadataImpl &&
+            other is _Metadata &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.symbol, symbol) || other.symbol == symbol) &&
             (identical(other.uri, uri) || other.uri == uri) &&
@@ -190,49 +163,73 @@ class _$MetadataImpl extends _Metadata {
             (identical(other.mint, mint) || other.mint == mint));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, symbol, uri, updateAuthority, mint);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MetadataImplCopyWith<_$MetadataImpl> get copyWith =>
-      __$$MetadataImplCopyWithImpl<_$MetadataImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MetadataImplToJson(
-      this,
-    );
+  String toString() {
+    return 'Metadata(name: $name, symbol: $symbol, uri: $uri, updateAuthority: $updateAuthority, mint: $mint)';
   }
 }
 
-abstract class _Metadata extends Metadata {
-  const factory _Metadata(
-      {required final String name,
-      required final String symbol,
-      required final String uri,
-      required final String updateAuthority,
-      required final String mint}) = _$MetadataImpl;
-  const _Metadata._() : super._();
-
-  factory _Metadata.fromJson(Map<String, dynamic> json) =
-      _$MetadataImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$MetadataCopyWith<$Res>
+    implements $MetadataCopyWith<$Res> {
+  factory _$MetadataCopyWith(_Metadata value, $Res Function(_Metadata) _then) =
+      __$MetadataCopyWithImpl;
   @override
-  String get name;
-  @override
-  String get symbol;
-  @override
-  String get uri;
-  @override
-  String get updateAuthority;
-  @override
-  String get mint;
-  @override
-  @JsonKey(ignore: true)
-  _$$MetadataImplCopyWith<_$MetadataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call(
+      {String name,
+      String symbol,
+      String uri,
+      String updateAuthority,
+      String mint});
 }
+
+/// @nodoc
+class __$MetadataCopyWithImpl<$Res> implements _$MetadataCopyWith<$Res> {
+  __$MetadataCopyWithImpl(this._self, this._then);
+
+  final _Metadata _self;
+  final $Res Function(_Metadata) _then;
+
+  /// Create a copy of Metadata
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? name = null,
+    Object? symbol = null,
+    Object? uri = null,
+    Object? updateAuthority = null,
+    Object? mint = null,
+  }) {
+    return _then(_Metadata(
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _self.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      uri: null == uri
+          ? _self.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as String,
+      updateAuthority: null == updateAuthority
+          ? _self.updateAuthority
+          : updateAuthority // ignore: cast_nullable_to_non_nullable
+              as String,
+      mint: null == mint
+          ? _self.mint
+          : mint // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+// dart format on

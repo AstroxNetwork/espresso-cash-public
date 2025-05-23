@@ -6,29 +6,28 @@ part of 'notification_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UnsupportedNotificationImpl _$$UnsupportedNotificationImplFromJson(
+_UnsupportedNotification _$UnsupportedNotificationFromJson(
         Map<String, dynamic> json) =>
-    _$UnsupportedNotificationImpl(
+    _UnsupportedNotification(
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$UnsupportedNotificationImplToJson(
-        _$UnsupportedNotificationImpl instance) =>
+Map<String, dynamic> _$UnsupportedNotificationToJson(
+        _UnsupportedNotification instance) =>
     <String, dynamic>{
       'method': instance.$type,
     };
 
-_$AccountNotificationImpl _$$AccountNotificationImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AccountNotificationImpl(
+AccountNotification _$AccountNotificationFromJson(Map<String, dynamic> json) =>
+    AccountNotification(
       params: NotificationParams<Account>.fromJson(
           json['params'] as Map<String, dynamic>,
           (value) => Account.fromJson(value as Map<String, dynamic>)),
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$AccountNotificationImplToJson(
-        _$AccountNotificationImpl instance) =>
+Map<String, dynamic> _$AccountNotificationToJson(
+        AccountNotification instance) =>
     <String, dynamic>{
       'params': instance.params.toJson(
         (value) => value.toJson(),
@@ -36,17 +35,15 @@ Map<String, dynamic> _$$AccountNotificationImplToJson(
       'method': instance.$type,
     };
 
-_$LogsNotificationImpl _$$LogsNotificationImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LogsNotificationImpl(
+LogsNotification _$LogsNotificationFromJson(Map<String, dynamic> json) =>
+    LogsNotification(
       params: NotificationParams<Logs>.fromJson(
           json['params'] as Map<String, dynamic>,
           (value) => Logs.fromJson(value as Map<String, dynamic>)),
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$LogsNotificationImplToJson(
-        _$LogsNotificationImpl instance) =>
+Map<String, dynamic> _$LogsNotificationToJson(LogsNotification instance) =>
     <String, dynamic>{
       'params': instance.params.toJson(
         (value) => value.toJson(),
@@ -54,16 +51,15 @@ Map<String, dynamic> _$$LogsNotificationImplToJson(
       'method': instance.$type,
     };
 
-_$ProgramNotificationImpl _$$ProgramNotificationImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ProgramNotificationImpl(
+ProgramNotification _$ProgramNotificationFromJson(Map<String, dynamic> json) =>
+    ProgramNotification(
       params: NotificationParams<dynamic>.fromJson(
           json['params'] as Map<String, dynamic>, (value) => value),
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$ProgramNotificationImplToJson(
-        _$ProgramNotificationImpl instance) =>
+Map<String, dynamic> _$ProgramNotificationToJson(
+        ProgramNotification instance) =>
     <String, dynamic>{
       'params': instance.params.toJson(
         (value) => value,
@@ -71,17 +67,17 @@ Map<String, dynamic> _$$ProgramNotificationImplToJson(
       'method': instance.$type,
     };
 
-_$SignatureNotificationImpl _$$SignatureNotificationImplFromJson(
+SignatureNotification _$SignatureNotificationFromJson(
         Map<String, dynamic> json) =>
-    _$SignatureNotificationImpl(
+    SignatureNotification(
       params: NotificationParams<OptionalError>.fromJson(
           json['params'] as Map<String, dynamic>,
           (value) => OptionalError.fromJson(value as Map<String, dynamic>)),
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$SignatureNotificationImplToJson(
-        _$SignatureNotificationImpl instance) =>
+Map<String, dynamic> _$SignatureNotificationToJson(
+        SignatureNotification instance) =>
     <String, dynamic>{
       'params': instance.params.toJson(
         (value) => value.toJson(),
@@ -89,17 +85,15 @@ Map<String, dynamic> _$$SignatureNotificationImplToJson(
       'method': instance.$type,
     };
 
-_$SlotNotificationImpl _$$SlotNotificationImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SlotNotificationImpl(
+SlotNotification _$SlotNotificationFromJson(Map<String, dynamic> json) =>
+    SlotNotification(
       params: NotificationParams<Slot>.fromJson(
           json['params'] as Map<String, dynamic>,
           (value) => Slot.fromJson(value as Map<String, dynamic>)),
       $type: json['method'] as String?,
     );
 
-Map<String, dynamic> _$$SlotNotificationImplToJson(
-        _$SlotNotificationImpl instance) =>
+Map<String, dynamic> _$SlotNotificationToJson(SlotNotification instance) =>
     <String, dynamic>{
       'params': instance.params.toJson(
         (value) => value.toJson(),

@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,77 +10,64 @@ part of 'message.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Message {
-  List<Instruction> get instructions => throw _privateConstructorUsedError;
+  List<Instruction> get instructions;
 
-  @JsonKey(ignore: true)
-  $MessageCopyWith<Message> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MessageCopyWith<$Res> {
-  factory $MessageCopyWith(Message value, $Res Function(Message) then) =
-      _$MessageCopyWithImpl<$Res, Message>;
-  @useResult
-  $Res call({List<Instruction> instructions});
-}
-
-/// @nodoc
-class _$MessageCopyWithImpl<$Res, $Val extends Message>
-    implements $MessageCopyWith<$Res> {
-  _$MessageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Message
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $MessageCopyWith<Message> get copyWith =>
+      _$MessageCopyWithImpl<Message>(this as Message, _$identity);
+
   @override
-  $Res call({
-    Object? instructions = null,
-  }) {
-    return _then(_value.copyWith(
-      instructions: null == instructions
-          ? _value.instructions
-          : instructions // ignore: cast_nullable_to_non_nullable
-              as List<Instruction>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Message &&
+            const DeepCollectionEquality()
+                .equals(other.instructions, instructions));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(instructions));
+
+  @override
+  String toString() {
+    return 'Message(instructions: $instructions)';
   }
 }
 
 /// @nodoc
-abstract class _$$MessageImplCopyWith<$Res> implements $MessageCopyWith<$Res> {
-  factory _$$MessageImplCopyWith(
-          _$MessageImpl value, $Res Function(_$MessageImpl) then) =
-      __$$MessageImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MessageCopyWith<$Res> {
+  factory $MessageCopyWith(Message value, $Res Function(Message) _then) =
+      _$MessageCopyWithImpl;
   @useResult
   $Res call({List<Instruction> instructions});
 }
 
 /// @nodoc
-class __$$MessageImplCopyWithImpl<$Res>
-    extends _$MessageCopyWithImpl<$Res, _$MessageImpl>
-    implements _$$MessageImplCopyWith<$Res> {
-  __$$MessageImplCopyWithImpl(
-      _$MessageImpl _value, $Res Function(_$MessageImpl) _then)
-      : super(_value, _then);
+class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
+  _$MessageCopyWithImpl(this._self, this._then);
 
+  final Message _self;
+  final $Res Function(Message) _then;
+
+  /// Create a copy of Message
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? instructions = null,
   }) {
-    return _then(_$MessageImpl(
+    return _then(_self.copyWith(
       instructions: null == instructions
-          ? _value._instructions
+          ? _self.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
               as List<Instruction>,
     ));
@@ -88,8 +76,8 @@ class __$$MessageImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MessageImpl extends _Message {
-  const _$MessageImpl({required final List<Instruction> instructions})
+class _Message extends Message {
+  const _Message({required final List<Instruction> instructions})
       : _instructions = instructions,
         super._();
 
@@ -101,16 +89,19 @@ class _$MessageImpl extends _Message {
     return EqualUnmodifiableListView(_instructions);
   }
 
+  /// Create a copy of Message
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Message(instructions: $instructions)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MessageCopyWith<_Message> get copyWith =>
+      __$MessageCopyWithImpl<_Message>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MessageImpl &&
+            other is _Message &&
             const DeepCollectionEquality()
                 .equals(other._instructions, _instructions));
   }
@@ -119,22 +110,42 @@ class _$MessageImpl extends _Message {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_instructions));
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'Message(instructions: $instructions)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$MessageCopyWith<$Res> implements $MessageCopyWith<$Res> {
+  factory _$MessageCopyWith(_Message value, $Res Function(_Message) _then) =
+      __$MessageCopyWithImpl;
+  @override
+  @useResult
+  $Res call({List<Instruction> instructions});
+}
+
+/// @nodoc
+class __$MessageCopyWithImpl<$Res> implements _$MessageCopyWith<$Res> {
+  __$MessageCopyWithImpl(this._self, this._then);
+
+  final _Message _self;
+  final $Res Function(_Message) _then;
+
+  /// Create a copy of Message
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$MessageImplCopyWith<_$MessageImpl> get copyWith =>
-      __$$MessageImplCopyWithImpl<_$MessageImpl>(this, _$identity);
+  $Res call({
+    Object? instructions = null,
+  }) {
+    return _then(_Message(
+      instructions: null == instructions
+          ? _self._instructions
+          : instructions // ignore: cast_nullable_to_non_nullable
+              as List<Instruction>,
+    ));
+  }
 }
 
-abstract class _Message extends Message {
-  const factory _Message({required final List<Instruction> instructions}) =
-      _$MessageImpl;
-  const _Message._() : super._();
-
-  @override
-  List<Instruction> get instructions;
-  @override
-  @JsonKey(ignore: true)
-  _$$MessageImplCopyWith<_$MessageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

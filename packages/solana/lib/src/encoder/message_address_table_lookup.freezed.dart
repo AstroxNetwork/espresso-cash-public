@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,77 +10,54 @@ part of 'message_address_table_lookup.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$MessageAddressTableLookup {
-  Ed25519HDPublicKey get accountKey => throw _privateConstructorUsedError;
-  List<int> get writableIndexes => throw _privateConstructorUsedError;
-  List<int> get readonlyIndexes => throw _privateConstructorUsedError;
+  Ed25519HDPublicKey get accountKey;
+  List<int> get writableIndexes;
+  List<int> get readonlyIndexes;
 
-  @JsonKey(ignore: true)
-  $MessageAddressTableLookupCopyWith<MessageAddressTableLookup> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MessageAddressTableLookupCopyWith<$Res> {
-  factory $MessageAddressTableLookupCopyWith(MessageAddressTableLookup value,
-          $Res Function(MessageAddressTableLookup) then) =
-      _$MessageAddressTableLookupCopyWithImpl<$Res, MessageAddressTableLookup>;
-  @useResult
-  $Res call(
-      {Ed25519HDPublicKey accountKey,
-      List<int> writableIndexes,
-      List<int> readonlyIndexes});
-}
-
-/// @nodoc
-class _$MessageAddressTableLookupCopyWithImpl<$Res,
-        $Val extends MessageAddressTableLookup>
-    implements $MessageAddressTableLookupCopyWith<$Res> {
-  _$MessageAddressTableLookupCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of MessageAddressTableLookup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $MessageAddressTableLookupCopyWith<MessageAddressTableLookup> get copyWith =>
+      _$MessageAddressTableLookupCopyWithImpl<MessageAddressTableLookup>(
+          this as MessageAddressTableLookup, _$identity);
+
   @override
-  $Res call({
-    Object? accountKey = null,
-    Object? writableIndexes = null,
-    Object? readonlyIndexes = null,
-  }) {
-    return _then(_value.copyWith(
-      accountKey: null == accountKey
-          ? _value.accountKey
-          : accountKey // ignore: cast_nullable_to_non_nullable
-              as Ed25519HDPublicKey,
-      writableIndexes: null == writableIndexes
-          ? _value.writableIndexes
-          : writableIndexes // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-      readonlyIndexes: null == readonlyIndexes
-          ? _value.readonlyIndexes
-          : readonlyIndexes // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MessageAddressTableLookup &&
+            (identical(other.accountKey, accountKey) ||
+                other.accountKey == accountKey) &&
+            const DeepCollectionEquality()
+                .equals(other.writableIndexes, writableIndexes) &&
+            const DeepCollectionEquality()
+                .equals(other.readonlyIndexes, readonlyIndexes));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      accountKey,
+      const DeepCollectionEquality().hash(writableIndexes),
+      const DeepCollectionEquality().hash(readonlyIndexes));
+
+  @override
+  String toString() {
+    return 'MessageAddressTableLookup(accountKey: $accountKey, writableIndexes: $writableIndexes, readonlyIndexes: $readonlyIndexes)';
   }
 }
 
 /// @nodoc
-abstract class _$$MessageAddressTableLookupImplCopyWith<$Res>
-    implements $MessageAddressTableLookupCopyWith<$Res> {
-  factory _$$MessageAddressTableLookupImplCopyWith(
-          _$MessageAddressTableLookupImpl value,
-          $Res Function(_$MessageAddressTableLookupImpl) then) =
-      __$$MessageAddressTableLookupImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MessageAddressTableLookupCopyWith<$Res> {
+  factory $MessageAddressTableLookupCopyWith(MessageAddressTableLookup value,
+          $Res Function(MessageAddressTableLookup) _then) =
+      _$MessageAddressTableLookupCopyWithImpl;
   @useResult
   $Res call(
       {Ed25519HDPublicKey accountKey,
@@ -88,15 +66,15 @@ abstract class _$$MessageAddressTableLookupImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MessageAddressTableLookupImplCopyWithImpl<$Res>
-    extends _$MessageAddressTableLookupCopyWithImpl<$Res,
-        _$MessageAddressTableLookupImpl>
-    implements _$$MessageAddressTableLookupImplCopyWith<$Res> {
-  __$$MessageAddressTableLookupImplCopyWithImpl(
-      _$MessageAddressTableLookupImpl _value,
-      $Res Function(_$MessageAddressTableLookupImpl) _then)
-      : super(_value, _then);
+class _$MessageAddressTableLookupCopyWithImpl<$Res>
+    implements $MessageAddressTableLookupCopyWith<$Res> {
+  _$MessageAddressTableLookupCopyWithImpl(this._self, this._then);
 
+  final MessageAddressTableLookup _self;
+  final $Res Function(MessageAddressTableLookup) _then;
+
+  /// Create a copy of MessageAddressTableLookup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,17 +82,17 @@ class __$$MessageAddressTableLookupImplCopyWithImpl<$Res>
     Object? writableIndexes = null,
     Object? readonlyIndexes = null,
   }) {
-    return _then(_$MessageAddressTableLookupImpl(
+    return _then(_self.copyWith(
       accountKey: null == accountKey
-          ? _value.accountKey
+          ? _self.accountKey
           : accountKey // ignore: cast_nullable_to_non_nullable
               as Ed25519HDPublicKey,
       writableIndexes: null == writableIndexes
-          ? _value._writableIndexes
+          ? _self.writableIndexes
           : writableIndexes // ignore: cast_nullable_to_non_nullable
               as List<int>,
       readonlyIndexes: null == readonlyIndexes
-          ? _value._readonlyIndexes
+          ? _self.readonlyIndexes
           : readonlyIndexes // ignore: cast_nullable_to_non_nullable
               as List<int>,
     ));
@@ -123,8 +101,8 @@ class __$$MessageAddressTableLookupImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MessageAddressTableLookupImpl implements _MessageAddressTableLookup {
-  const _$MessageAddressTableLookupImpl(
+class _MessageAddressTableLookup implements MessageAddressTableLookup {
+  const _MessageAddressTableLookup(
       {required this.accountKey,
       required final List<int> writableIndexes,
       required final List<int> readonlyIndexes})
@@ -149,16 +127,21 @@ class _$MessageAddressTableLookupImpl implements _MessageAddressTableLookup {
     return EqualUnmodifiableListView(_readonlyIndexes);
   }
 
+  /// Create a copy of MessageAddressTableLookup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'MessageAddressTableLookup(accountKey: $accountKey, writableIndexes: $writableIndexes, readonlyIndexes: $readonlyIndexes)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MessageAddressTableLookupCopyWith<_MessageAddressTableLookup>
+      get copyWith =>
+          __$MessageAddressTableLookupCopyWithImpl<_MessageAddressTableLookup>(
+              this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MessageAddressTableLookupImpl &&
+            other is _MessageAddressTableLookup &&
             (identical(other.accountKey, accountKey) ||
                 other.accountKey == accountKey) &&
             const DeepCollectionEquality()
@@ -174,29 +157,58 @@ class _$MessageAddressTableLookupImpl implements _MessageAddressTableLookup {
       const DeepCollectionEquality().hash(_writableIndexes),
       const DeepCollectionEquality().hash(_readonlyIndexes));
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'MessageAddressTableLookup(accountKey: $accountKey, writableIndexes: $writableIndexes, readonlyIndexes: $readonlyIndexes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$MessageAddressTableLookupCopyWith<$Res>
+    implements $MessageAddressTableLookupCopyWith<$Res> {
+  factory _$MessageAddressTableLookupCopyWith(_MessageAddressTableLookup value,
+          $Res Function(_MessageAddressTableLookup) _then) =
+      __$MessageAddressTableLookupCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {Ed25519HDPublicKey accountKey,
+      List<int> writableIndexes,
+      List<int> readonlyIndexes});
+}
+
+/// @nodoc
+class __$MessageAddressTableLookupCopyWithImpl<$Res>
+    implements _$MessageAddressTableLookupCopyWith<$Res> {
+  __$MessageAddressTableLookupCopyWithImpl(this._self, this._then);
+
+  final _MessageAddressTableLookup _self;
+  final $Res Function(_MessageAddressTableLookup) _then;
+
+  /// Create a copy of MessageAddressTableLookup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$MessageAddressTableLookupImplCopyWith<_$MessageAddressTableLookupImpl>
-      get copyWith => __$$MessageAddressTableLookupImplCopyWithImpl<
-          _$MessageAddressTableLookupImpl>(this, _$identity);
+  $Res call({
+    Object? accountKey = null,
+    Object? writableIndexes = null,
+    Object? readonlyIndexes = null,
+  }) {
+    return _then(_MessageAddressTableLookup(
+      accountKey: null == accountKey
+          ? _self.accountKey
+          : accountKey // ignore: cast_nullable_to_non_nullable
+              as Ed25519HDPublicKey,
+      writableIndexes: null == writableIndexes
+          ? _self._writableIndexes
+          : writableIndexes // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      readonlyIndexes: null == readonlyIndexes
+          ? _self._readonlyIndexes
+          : readonlyIndexes // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+    ));
+  }
 }
 
-abstract class _MessageAddressTableLookup implements MessageAddressTableLookup {
-  const factory _MessageAddressTableLookup(
-          {required final Ed25519HDPublicKey accountKey,
-          required final List<int> writableIndexes,
-          required final List<int> readonlyIndexes}) =
-      _$MessageAddressTableLookupImpl;
-
-  @override
-  Ed25519HDPublicKey get accountKey;
-  @override
-  List<int> get writableIndexes;
-  @override
-  List<int> get readonlyIndexes;
-  @override
-  @JsonKey(ignore: true)
-  _$$MessageAddressTableLookupImplCopyWith<_$MessageAddressTableLookupImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on

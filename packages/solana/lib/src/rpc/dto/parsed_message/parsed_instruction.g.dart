@@ -6,60 +6,60 @@ part of 'parsed_instruction.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ParsedInstructionSystemImpl _$$ParsedInstructionSystemImplFromJson(
+ParsedInstructionSystem _$ParsedInstructionSystemFromJson(
         Map<String, dynamic> json) =>
-    _$ParsedInstructionSystemImpl(
+    ParsedInstructionSystem(
       programId: json['programId'] as String,
       parsed: ParsedSystemInstruction.fromJson(
           json['parsed'] as Map<String, dynamic>),
       $type: json['program'] as String?,
     );
 
-Map<String, dynamic> _$$ParsedInstructionSystemImplToJson(
-        _$ParsedInstructionSystemImpl instance) =>
+Map<String, dynamic> _$ParsedInstructionSystemToJson(
+        ParsedInstructionSystem instance) =>
     <String, dynamic>{
       'programId': instance.programId,
       'parsed': instance.parsed.toJson(),
       'program': instance.$type,
     };
 
-_$ParsedInstructionSplTokenImpl _$$ParsedInstructionSplTokenImplFromJson(
+ParsedInstructionSplToken _$ParsedInstructionSplTokenFromJson(
         Map<String, dynamic> json) =>
-    _$ParsedInstructionSplTokenImpl(
+    ParsedInstructionSplToken(
       parsed: ParsedSplTokenInstruction.fromJson(
           json['parsed'] as Map<String, dynamic>),
       $type: json['program'] as String?,
     );
 
-Map<String, dynamic> _$$ParsedInstructionSplTokenImplToJson(
-        _$ParsedInstructionSplTokenImpl instance) =>
+Map<String, dynamic> _$ParsedInstructionSplTokenToJson(
+        ParsedInstructionSplToken instance) =>
     <String, dynamic>{
       'parsed': instance.parsed.toJson(),
       'program': instance.$type,
     };
 
-_$ParsedInstructionMemoImpl _$$ParsedInstructionMemoImplFromJson(
+ParsedInstructionMemo _$ParsedInstructionMemoFromJson(
         Map<String, dynamic> json) =>
-    _$ParsedInstructionMemoImpl(
+    ParsedInstructionMemo(
       memo: json['parsed'] as String?,
       $type: json['program'] as String?,
     );
 
-Map<String, dynamic> _$$ParsedInstructionMemoImplToJson(
-        _$ParsedInstructionMemoImpl instance) =>
+Map<String, dynamic> _$ParsedInstructionMemoToJson(
+        ParsedInstructionMemo instance) =>
     <String, dynamic>{
       'parsed': instance.memo,
       'program': instance.$type,
     };
 
-_$ParsedInstructionUnsupportedImpl _$$ParsedInstructionUnsupportedImplFromJson(
+ParsedInstructionUnsupported _$ParsedInstructionUnsupportedFromJson(
         Map<String, dynamic> json) =>
-    _$ParsedInstructionUnsupportedImpl(
+    ParsedInstructionUnsupported(
       program: json['program'] as String?,
     );
 
-Map<String, dynamic> _$$ParsedInstructionUnsupportedImplToJson(
-        _$ParsedInstructionUnsupportedImpl instance) =>
+Map<String, dynamic> _$ParsedInstructionUnsupportedToJson(
+        ParsedInstructionUnsupported instance) =>
     <String, dynamic>{
       'program': instance.program,
     };
